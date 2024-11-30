@@ -13,10 +13,8 @@ CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
 
 
 # Vercel app wor
-STATIC_URL = '/static/'  # This should match Vercel routing
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Use Path for STATIC_ROOT
 
 
 
