@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0igsv=^pnk-=q*-+e+s)ms^b$)t2!4e2(16#1h4e_%lq!-39#='
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','.now.sh']
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', '.now.sh', 'localhost']
 CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
 
 
