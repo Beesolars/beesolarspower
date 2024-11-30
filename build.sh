@@ -18,7 +18,7 @@ python3.9 -m pip install -r requirements.txt
 
 
 # collect static files into the staticfiles directory
-python3 manage.py collectstatic --noinput
+python3.9 manage.py collectstatic --noinput
 
 
 echo "BUILD END"
