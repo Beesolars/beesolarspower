@@ -27,12 +27,22 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Vercel app wor
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Use Path for STATIC_ROOT
 
-# If you have a custom folder in your project directory for additional static files:
-STATICFILES_DIRS = [
-    BASE_DIR / "static",  # Adjust the path if necessary
-]
+
+
+
+
+# STATIC_URL = '/static/'
+
+# # If you have a custom folder in your project directory for additional static files:
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",  # Adjust the path if necessary
+# ]
+
+# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Application definition
 
