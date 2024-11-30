@@ -6,17 +6,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0igsv=^pnk-=q*-+e+s)ms^b$)t2!4e2(16#1h4e_%lq!-39#='
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','.now.sh','beesolarspower.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','.now.sh']
 CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
 
 
 
-# # Static files settings
-# STATIC_URL = '/static/'  # This is used by Django to serve static files
-# STATIC_ROOT = BASE_DIR / 'staticfiles'  # This is where static files will be collected in production
+# Static files settings
+STATIC_URL = '/static/'  # This is used by Django to serve static files
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # This is where static files will be collected in production
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Uncomment if you need to serve extra static files outside of your app directories:
 # STATICFILES_DIRS = [ BASE_DIR / "static" ]

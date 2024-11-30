@@ -16,6 +16,7 @@ python3.9 -m pip install --upgrade pip
 # install all dependencies in the venv
 python3.9 -m pip install -r requirements.txt 
 
+
 # collect static files into the staticfiles directory
 python3.9 manage.py collectstatic --noinput
 
