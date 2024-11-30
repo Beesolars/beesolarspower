@@ -12,11 +12,13 @@ CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
 
 
 
-# # Vercel app wor
-# STATIC_URL = '/static/'
+# Vercel app wor
+STATIC_URL = '/static/'  # This should match Vercel routing
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# # This should match the `distDir` in vercel.json
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+
 
 # # Static files settings
 # STATIC_URL = '/static/'  # This is used by Django to serve static files
@@ -25,9 +27,9 @@ CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
 
 
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
-STATIC_ROOT = BASE_DIR / "staticfiles"  # This is where files will be collected
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [BASE_DIR / "static"]
+# STATIC_ROOT = BASE_DIR / "staticfiles"  # This is where files will be collected
 
 
 
