@@ -3,33 +3,18 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-0igsv=^pnk-=q*-+e+s)ms^b$)t2!4e2(16#1h4e_%lq!-39#='
-DEBUG = True
+# Secret key and debug
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-secret-key')  # Use environment variables for production
+DEBUG = os.getenv('DEBUG', 'True') == 'True'  # Set to False in production
 
+# Allowed hosts and CSRF trusted origins
 ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', '.now.sh', 'localhost']
 CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
 
-
-
 # Static files settings
-STATIC_URL = '/static/'  # This is used by Django to serve static files
-STATIC_ROOT = os.path.join(BASE_DIR, "/static/")
-  # This is where static files will be collected in production
-
-
-
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [BASE_DIR / "static"]
-# STATIC_ROOT = BASE_DIR / "staticfiles"  # This is where files will be collected
-
-
-
-
-# STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# Uncomment if you need to serve extra static files outside of your app directories:
-# STATICFILES_DIRS = [ BASE_DIR / "static" ]
+STATIC_URL = '/static/'  # URL for accessing static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory to collect static files for production
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Additional static files directories (e.g., assets)
 
 # Application definition
 INSTALLED_APPS = [
@@ -57,7 +42,7 @@ ROOT_URLCONF = 'beesolarspower.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Path to custom templates
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,7 +57,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'beesolarspower.wsgi.application'
 
-# Database setup for development (SQLite in this case)
+# Database setup for development
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
