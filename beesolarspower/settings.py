@@ -13,7 +13,8 @@ CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
 
 # Static files settings
 STATIC_URL = '/static/'  # This is used by Django to serve static files
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # This is where static files will be collected in production
+STATIC_ROOT = os.path.join(BASE_DIR, "/static/")
+  # This is where static files will be collected in production
 
 
 
