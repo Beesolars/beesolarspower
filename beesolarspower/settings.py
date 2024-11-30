@@ -14,7 +14,8 @@ CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app']
 
 # Vercel app wor
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # Use Path for STATIC_ROOT
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
 
 
 
